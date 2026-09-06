@@ -4,6 +4,8 @@ import com.example.treino_matricula_apis.model.Matricula;
 import com.example.treino_matricula_apis.service.MatriculaService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/matriculas")
 public class MatriculaController{
@@ -22,6 +24,11 @@ public class MatriculaController{
     @GetMapping("/{cpf}")
     public Matricula buscarPorCpf(@PathVariable String cpf){
         return service.buscarPorCpf(cpf);
+    }
+
+    @GetMapping
+    public List<Matricula> exibirTodasMatriculas(){
+        return service.exibirTodasMatriculas();
     }
 }
 

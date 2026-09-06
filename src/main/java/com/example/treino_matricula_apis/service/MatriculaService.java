@@ -4,6 +4,8 @@ import com.example.treino_matricula_apis.model.Matricula;
 import com.example.treino_matricula_apis.repository.MatriculaRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MatriculaService {
 
@@ -29,6 +31,10 @@ public class MatriculaService {
         return repository.findByCpf(cpf) .orElseThrow(()-> new RuntimeException(
                 "Matricula não encontrada"
         ));
+    }
+
+    public List<Matricula> exibirTodasMatriculas() {
+        return repository.findAll();
     }
 
 }
