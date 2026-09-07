@@ -1,0 +1,25 @@
+JWT_SECRET: uma-chave-secreta-bem-grande-para-estudo-123456789
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+            - id: matricula-service
+              uri: http://localhost:8081
+              predicates:
+                - Path=/api/matriculas/**
+              filters:
+                - StripPrefix=1
+                - AddRequestHeader=X-Gateway, api-gateway
+
+server:
+  port: 8080
