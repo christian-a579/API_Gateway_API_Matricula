@@ -66,7 +66,7 @@ O cliente realiza as requisições através do **API Gateway**, que é responsá
 * Git
 * GitHub
 * Postman
-* IntelliJ IDEA / VS Code
+* IntelliJ IDEA 
 
 ---
 
