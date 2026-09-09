@@ -24,8 +24,6 @@ public class LoginController {
         String username = dados.get("username");
         String password = dados.get("password");
 
-        System.out.println("USERNAME: [" + username + "]");
-        System.out.println("PASSWORD: [" + password + "]");
 
         if (!"admin".equals(username) || !"123456".equals(password)) {
             throw new RuntimeException("Usuário ou senha inválidos");

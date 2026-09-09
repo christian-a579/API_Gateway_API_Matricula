@@ -1,9 +1,5 @@
 JWT_SECRET: uma-chave-secreta-bem-grande-para-estudo-123456789
 
-logging:
-  level:
-    org.springframework.security: DEBUG
-
 spring:
   application:
     name: api-gateway
